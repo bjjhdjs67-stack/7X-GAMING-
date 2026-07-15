@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7X GAMING - Tournament Dashboard</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0b111e;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.4;
+        }
+        .header-banner {
+            background: linear-gradient(135deg, #0f1c3f 0%, #0b111e 100%);
+            border-bottom: 3px solid #00d2ff;
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .logo-text {
+            font-size: 28pt;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #ffffff;
+            margin: 0;
+            text-shadow: 0 0 10px rgba(0, 210, 255, 0.6);
+        }
+        .logo-accent {
+            color: #ff5722;
+        }
+        .subtitle {
+            font-size: 11pt;
+            color: #8a99ad;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 40px 20px;
+        }
+        .section-title {
+            font-size: 14pt;
+            color: #00d2ff;
+            border-left: 4px solid #ff5722;
+            padding-left: 10px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .screen-card {
+            background-color: #131c2e;
+            border: 1px solid #22314d;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        .screen-header {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #ffffff;
+            border-bottom: 1px solid #22314d;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .info-row {
+            margin-bottom: 12px;
+            font-size: 10.5pt;
+        }
+        .info-label {
+            color: #8a99ad;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .info-value {
+            color: #ffffff;
+        }
+        .highlight-orange {
+            color: #ff5722;
+            font-weight: bold;
+        }
+        .highlight-cyan {
+            color: #00d2ff;
+            font-weight: bold;
+        }
+        .form-mock {
+            background-color: #0b111e;
+            border: 1px solid #22314d;
+            border-radius: 4px;
+            padding: 12px;
+            color: #8a99ad;
+            font-size: 10pt;
+            margin-bottom: 15px;
+        }
+        .qr-mock-container {
+            text-align: center;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 6px;
+            width: 160px;
+            margin: 20px auto;
+        }
+        .qr-box {
+            width: 130px;
+            height: 130px;
+            background-color: #000000;
+            margin: 0 auto;
+            position: relative;
+        }
+        .qr-inner {
+            position: absolute;
+            top: 5px; left: 5px; right: 5px; bottom: 5px;
+            background-color: #ffffff;
+            border: 2px solid #000000;
+        }
+        .qr-pattern {
+            width: 100%; height: 100%;
+            background-image: linear-gradient(45deg, #000 25%, transparent 25%), 
+                              linear-gradient(-45deg, #000 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, #000 75%), 
+                              linear-gradient(-45deg, transparent 75%, #000 75%);
+            background-size: 10px 10px;
+            opacity: 0.8;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 10pt;
+        }
+        th, td {
+            padding: 12px 10px;
+            text-align: left;
+            border-bottom: 1px solid #22314d;
+        }
+        th {
+            background-color: #0f1c3f;
+            color: #00d2ff;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #17243c;
+        }
+        .rank-1 {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        .footer-note {
+            text-align: center;
+            font-size: 9pt;
+            color: #53647c;
+            margin-top: 40px;
+            border-top: 1px solid #22314d;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <div class="logo-text"><span class="logo-accent">7X</span> GAMING</div>
+        <div class="subtitle">Ultimate Solo Esports Platform</div>
+    </div>
+
+    <div class="container">
+        
+        <div class="section-title">Screen 1: Tournament Schedule & Rules</div>
+        <div class="screen-card">
+            <div class="screen-header">⚡ Upcoming Solo Match Details</div>
+            <div class="info-row"><span class="info-label">Match Format:</span> <span class="info-value">Solo (100 Players Max)</span></div>
+            <div class="info-row"><span class="info-label">Entry Fee:</span> <span class="info-value highlight-orange">₹20 per Player</span></div>
+            <div class="info-row"><span class="info-label">Match Date & Time:</span> <span class="info-value">Tonight at 07:00 PM IST</span></div>
+            <div class="info-row"><span class="info-label">Map:</span> <span class="info-value">Erangel (Classic)</span></div>
+            <div class="info-row"><span class="info-label">Kill Bonus:</span> <span class="info-value highlight-cyan">₹5 per Kill</span></div>
+            <div class="info-row"><span class="info-label">Grand Prize:</span> <span class="info-value highlight-cyan">₹500 for Chicken Dinner 🍗</span></div>
+        </div>
+
+        <div class="section-title">Screen 2: Verification & Authentication</div>
+        <div class="screen-card">
+            <div class="screen-header">🔐 Secure Player Login / Registration</div>
+            <div class="info-row" style="color:#8a99ad; margin-bottom:15px;">Players must register using valid contact information so administrators can seamlessly share credentials and distribute prize payouts.</div>
+            
+            <span class="info-label">Email ID Address</span>
+            <div class="form-mock">example@gaming.com</div>
+            
+            <span class="info-label">Phone Number (WhatsApp for Room Credentials)</span>
+            <div class="form-mock">+91 98765 43210</div>
+            
+            <div class="info-row" style="font-size:9pt; color:#8a99ad; text-align:right;">Verification via One-Time Password (OTP) Enabled</div>
+        </div>
+
+        <div class="section-title">Screen 3: Payment Gateway Integrations</div>
+        <div class="screen-card">
+            <div class="screen-header">💳 Registration Fee Payment Screen</div>
+            <div class="info-row" style="text-align:center;"><span class="info-label">Amount Due:</span> <span class="info-value highlight-orange" style="font-size:14pt;">₹20</span></div>
+            
+            <div class="qr-mock-container">
+                <div class="qr-box">
+                    <div class="qr-inner">
+                        <div class="qr-pattern"></div>
+                    </div>
+                </div>
+                <div style="color:#000000; font-size:8pt; font-weight:bold; margin-top:5px;">7X GAMING OFFICIAL QR</div>
+            </div>
+            
+            <div class="info-row" style="text-align:center; font-size:9.5pt; color:#8a99ad;">Scan the QR code above using Bhim UPI, PhonePe, or GooglePay.</div>
+            
+            <span class="info-label">Enter Transaction ID / UTR Number after Payment</span>
+            <div class="form-mock">e.g., 429381048291</div>
+        </div>
+
+        <div class="section-title">Screen 4: Match Access Center</div>
+        <div class="screen-card">
+            <div class="screen-header">🔑 Room Credentials Room Access</div>
+            <div class="info-row" style="color:#8a99ad; margin-bottom:15px;">Visible exclusively to successfully verified and paid players 15 minutes before the scheduled start time.</div>
+            
+            <table style="margin-bottom: 10px;">
+                <tr>
+                    <th style="width: 50%;">BGMI ROOM ID</th>
+                    <th style="width: 50%;">PASSWORD</th>
+                </tr>
+                <tr>
+                    <td style="font-size:13pt; font-weight:bold; color:#00d2ff; padding: 15px 8px;">123 456 78</td>
+                    <td style="font-size:13pt; font-weight:bold; color:#ff5722; padding: 15px 8px;">7X@GAME</td>
+                </tr>
+            </table>
+            <div class="info-row" style="font-size:9pt; color:#ff5722; font-weight:bold;">⚠️ Caution: Do not share these credentials. Anti-cheat is strictly active.</div>
+        </div>
+
+        <div class="section-title">Screen 5: Tournament Standings & Rewards</div>
+        <div class="screen-card">
+            <div class="screen-header">🏆 Match Leaderboard & Earnings Breakdown</div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th style="text-align: center; width: 12%;">Rank</th>
+                        <th>Player Name</th>
+                        <th style="text-align: center; width: 15%;">Kills</th>
+                        <th style="text-align: right; width: 25%;">Total Earnings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;" class="rank-1">#1</td>
+                        <td>ALPHA_WOLF <span style="font-size:8pt; background-color:#ff5722; color:#fff; padding:2px 4px; border-radius:3px;">CHICKEN DINNER</span></td>
+                        <td style="text-align: center; font-weight:bold;">18</td>
+                        <td style="text-align: right; color:#ffd700; font-weight:bold;">₹590</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">#2</td>
+                        <td>ANRAVWIR</td>
+                        <td style="text-align: center;">15</td>
+                        <td style="text-align: right; color:#ffffff;">₹75</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">#3</td>
+                        <td>SNIPER_JOSH</td>
+                        <td style="text-align: center;">12</td>
+                        <td style="text-align: right; color:#ffffff;">₹60</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">#41</td>
+                        <td>SRRRI_JOSH</td>
+                        <td style="text-align: center;">10</td>
+                        <td style="text-align: right; color:#ffffff;">₹50</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">#66</td>
+                        <td>BGMI_KING</td>
+                        <td style="text-align: center;">3</td>
+                        <td style="text-align: right; color:#ffffff;">₹15</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">#100</td>
+                        <td>RINSH</td>
+                        <td style="text-align: center;">0</td>
+                        <td style="text-align: right; color:#8a99ad;">₹0</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="info-row" style="margin-top:15px; font-size:9pt; color:#8a99ad;">
+                * Calculations: Payout = (Kills &times; ₹5) + (Chicken Dinner Bonus ₹500 if applicable).
+            </div>
+        </div>
+
+        <div class="footer-note">
+            7X GAMING Esports Platform UI Layout.
+        </div>
+
+    </div>
+
+</body>
+          </html>
